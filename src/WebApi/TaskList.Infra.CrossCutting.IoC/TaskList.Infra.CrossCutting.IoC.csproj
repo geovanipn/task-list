@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilitarios\Utils.Mediator\Utils.Mediator.csproj" />
+    <ProjectReference Include="..\TaskList.Application\TaskList.Application.csproj" />
+    <ProjectReference Include="..\TaskList.Domain\TaskList.Domain.csproj" />
+    <ProjectReference Include="..\TaskList.Infra.CrossCutting.Identity\TaskList.Infra.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\TaskList.Infra.Data.Context\TaskList.Infra.Data.Context.csproj" />
+    <ProjectReference Include="..\TaskList.Infra.Data.Repository\TaskList.Infra.Data.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

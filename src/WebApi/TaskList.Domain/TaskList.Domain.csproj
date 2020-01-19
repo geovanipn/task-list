@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilitarios\Utils.Authentication\Utils.Authentication.csproj" />
+    <ProjectReference Include="..\..\Utilitarios\Utils.Domain\Utils.Domain.csproj" />
+    <ProjectReference Include="..\..\Utilitarios\Utils.EntityFramework.SqlDataContext\Utils.EntityFramework.SqlDataContext.csproj" />
+  </ItemGroup>
+
+</Project>

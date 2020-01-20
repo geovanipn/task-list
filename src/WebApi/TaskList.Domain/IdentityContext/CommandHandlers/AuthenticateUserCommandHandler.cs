@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TaskList.Domain.IdentityContext.Commands;
 using TaskList.Domain.IdentityContext.Interfaces.Repositories;
+using TaskList.Domain.IdentityContext.Models;
 using TaskList.Domain.IdentityContext.OutputModels;
 using TaskList.Domain.SharedContext.CommandHandler;
 using TaskList.Domain.SharedContext.Notifications;
@@ -32,6 +33,15 @@ namespace TaskList.Domain.IdentityContext.CommandHandlers
 
         public async Task<Authorization> Handle(AuthenticateUserCommand request, CancellationToken cancellationToken)
         {
+            //TODO: arrumar
+            var superoUser = await _userRepository.GetByName("supero");
+            if (superoUser == null)
+            {
+                await _userRepository.Add(User.Create("supero", "123456"));
+                await Commit();
+            }
+
+
             if (!await CommandIsValid(request)) return Authorization.Empty;
 
             var user = await _userRepository.GetByName(request.UserName);

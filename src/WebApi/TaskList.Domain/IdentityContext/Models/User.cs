@@ -11,5 +11,14 @@ namespace TaskList.Domain.IdentityContext.Models
         public string Password { get; private set; }
 
         public ICollection<Task> TaskItems { get; private set; }
+
+        private User() { }
+
+        public static User Create(in string name, in string password) =>
+            new User
+            {
+                Name = name,
+                Password = password
+            };
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using System.Linq;
+using TaskList.Domain.IdentityContext.Models;
 using TaskList.Infra.Data.Context.EntityFramework;
 using Utils.EntityFramework.SqlDataContext;
 
@@ -33,7 +34,9 @@ namespace TaskList.Infra.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(GetConnectionString());
+            optionsBuilder.UseInMemoryDatabase("localdb");
+            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFProviders.InMemory;Trusted_Connection=True;ConnectRetryCount=0");
+            //optionsBuilder.UseSqlServer(GetConnectionString());
         }
 
         public static string GetConnectionString(

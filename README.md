@@ -16,11 +16,11 @@ Tecnologias e padrões utilizados
   - Solid e Clean Code
   - Interface em Vue.js com Vuetify
  
-Para rodar a camada de aprensetação
-  npm install
-  npm run server
+Para rodar a camada de aprensetação.
+  - npm install
+  - npm run server
   
 Usuário defautl
-	name: supero
-	password: 123456
+- name: supero
+- password: 123456
  

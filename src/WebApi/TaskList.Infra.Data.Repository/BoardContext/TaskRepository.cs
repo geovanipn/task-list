@@ -28,7 +28,7 @@ namespace TaskList.Infra.Data.Repository.BoardContext
         {
             return await System.Threading.Tasks.Task.Run(() =>
             {
-                return DbSet.Where(x => x.IdUser == userId).Select(task =>
+                return DbSet.Where(x => x.IdUser == userId && x.Status != TypeTaskStatus.Removed).Select(task =>
                    new TaskOutputModel(
                        task.Id,
                        task.Title,

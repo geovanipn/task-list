@@ -20,7 +20,7 @@ Para rodar a camada de aprensetação.
   - npm install
   - npm run server
   
-Usuário defautl
+Usuário default
 - name: supero
 - password: 123456
  

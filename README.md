@@ -10,10 +10,12 @@ Tecnologias e padrões utilizados
   - dotnet core 2.2
   - FluentValidation
   - RepositoryPattern
-  - Commands - Handlers
+  - MediatR
+  - AutoMapper
   - EntityFramework (SQL Server in memory) 
   - JWT Bearer
   - Solid e Clean Code
+  - DDD
   - Interface em Vue.js com Vuetify
  
 Para rodar a camada de aprensetação.
